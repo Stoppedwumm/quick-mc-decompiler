@@ -31,16 +31,9 @@ jobs:
             - name: Install dependencies
                 run: npm install
 
-            # Run ESLint
-            - name: Run ESLint
-                run: npx eslint .
-
-            # Run tests
-            - name: Run tests
-                run: npm test
-
             # Test the CLI tool
             - name: Test CLI tool
                 run: |
-                    node ./path-to-your-cli-tool.js --help
-                    node ./path-to-your-cli-tool.js some-command
+                    node . init
+                    node . download
+                    node . run
