@@ -113,7 +113,7 @@ program.command('run')
           }
         })
       })
-      const zip = await unzipper.Open.file(".qmcd/main.zip")
+      const zip = await unzipper.Open.file(".qmcd/out/deobf.jar")
       await zip.extract({ path: 'workspace' })
     } catch (err) {
       console.log(chalk.red('Error running decompiler: ' + err));
