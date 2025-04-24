@@ -10,30 +10,21 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            # Checkout the repository
             - name: Checkout code
-                uses: actions/checkout@v3
-
-            # Set up Node.js
+              uses: actions/checkout@v3
             - name: Set up Node.js
-                uses: actions/setup-node@v3
-                with:
-                    node-version: '16' # Specify the Node.js version
-
-            # Set up Java 17
+              uses: actions/setup-node@v3
+              with:
+                node-version: '16'
             - name: Set up Java 17
-                uses: actions/setup-java@v3
-                with:
-                    distribution: 'temurin' # Use Eclipse Temurin distribution
-                    java-version: '17'
-
-            # Install dependencies
+              uses: actions/setup-java@v3
+              with:
+                distribution: 'temurin'
+                java-version: '17'
             - name: Install dependencies
-                run: npm install
-
-            # Test the CLI tool
+              run: npm install
             - name: Test CLI tool
-                run: |
-                    node . init
-                    node . download
-                    node . run
+              run: |
+                node . init
+                node . download
+                node . run
