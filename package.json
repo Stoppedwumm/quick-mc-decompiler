@@ -1,0 +1,21 @@
+{
+  "name": "qmcd",
+  "version": "1.0.0",
+  "description": "Quick decompiler for Minecraft using MaxPixelStudios/MinecraftDecompiler and Vineflower/vineflower",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Stoppedwumm",
+  "license": "ISC",
+  "bin": {
+    "qmcd": "./index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "unzipper": "^0.12.3"
+  }
+}
